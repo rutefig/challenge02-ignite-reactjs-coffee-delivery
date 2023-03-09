@@ -3,15 +3,15 @@ import styled from 'styled-components'
 export const HomeContainer = styled.div``
 
 export const HeaderContainer = styled.header`
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    padding: 32px 160px;
+  padding: 32px 160px;
 `
 
 export const HeaderLogo = styled.img`
-    /* width: 5.30rem; */
-    height: 2.5rem;
+  /* width: 5.30rem; */
+  height: 2.5rem;
 `
 
 export const HeroContainer = styled.div`

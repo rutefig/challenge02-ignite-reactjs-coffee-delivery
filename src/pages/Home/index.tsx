@@ -15,10 +15,9 @@ import headerLogo from '../../assets/header_logo.svg'
 export function Home() {
   return (
     <HomeContainer>
-
-    <HeaderContainer>
+      <HeaderContainer>
         <HeaderLogo src={headerLogo} />
-    </HeaderContainer>
+      </HeaderContainer>
 
       <HeroContainer>
         <HeroTextContainer>
