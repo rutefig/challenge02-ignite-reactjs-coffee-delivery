@@ -1,6 +1,6 @@
 import React, { ButtonHTMLAttributes } from 'react'
 import { IconButtonContainer } from './styles'
-import cartIcon from '../../assets/icon_cart.svg'
+import cartIcon from '../../assets/icons/icon_cart.svg'
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
