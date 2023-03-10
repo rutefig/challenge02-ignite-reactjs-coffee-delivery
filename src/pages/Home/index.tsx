@@ -1,34 +1,14 @@
 import React from 'react'
-import {
-  Title,
-  HomeContainer,
-  Subtitle,
-  HeroImage,
-  HeroContainer,
-  HeroTextContainer,
-  HeaderContainer,
-  HeaderLogo,
-} from './styles'
-import coffeeImg from '../../assets/img_coffee_home.svg'
-import headerLogo from '../../assets/header_logo.svg'
+import { HomeContainer } from './styles'
+import { Header } from './components/Header'
+import { Hero } from './components/Hero'
 
 export function Home() {
   return (
     <HomeContainer>
-      <HeaderContainer>
-        <HeaderLogo src={headerLogo} />
-      </HeaderContainer>
+      <Header />
 
-      <HeroContainer>
-        <HeroTextContainer>
-          <Title>Encontre o café perfeito para qualquer hora do dia</Title>
-          <Subtitle>
-            Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
-            hora
-          </Subtitle>
-        </HeroTextContainer>
-        <HeroImage src={coffeeImg} />
-      </HeroContainer>
+      <Hero />
     </HomeContainer>
   )
 }
