@@ -8,8 +8,12 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant
 }
 
-export const Button: React.FC<Props> = ({ variant = 'normal', children, ...props }) => {
-  return <Button variant={variant}>{children}</Button>
+export const Button: React.FC<Props> = ({
+  variant = 'normal',
+  children,
+  ...props
+}) => {
+  return <Button variant={variant} {...props}>{children}</Button>
 }
 
 const getPadding = (variant: Variant) => {
@@ -20,14 +24,14 @@ const getPadding = (variant: Variant) => {
         hoverBackground: defaultTheme['base-hover'],
         textColor: defaultTheme['base-text'],
         fontSize: '0.75rem',
-        padding: '0px 8px'
+        padding: '0px 8px',
       }
     case 'icon':
       return {
         background: defaultTheme['purple-dark'],
         hoverBackground: defaultTheme['purple'],
         textColor: defaultTheme['white'],
-        padding: '8px'
+        padding: '8px',
       }
     default:
       return {
@@ -35,13 +39,13 @@ const getPadding = (variant: Variant) => {
         hoverBackground: defaultTheme['yellow-dark'],
         textColor: defaultTheme['white'],
         fontSize: '0.875rem',
-        padding: '12px 8px'
+        padding: '12px 8px',
       }
   }
 }
 
-export const StyledButton = styled(Button).attrs(props => ({
-  ...getPadding(props.variant ?? 'normal')
+export const StyledButton = styled(Button).attrs((props) => ({
+  ...getPadding(props.variant ?? 'normal'),
 }))`
   display: flex;
   justify-content: center;
@@ -59,7 +63,6 @@ export const StyledButton = styled(Button).attrs(props => ({
 
   color: ${(props) => props.textColor};
   font-size: ${(props) => props.fontSize};
-  
 
   transition: all 0.2s ease;
 
