@@ -1,7 +1,7 @@
 import { Package, ShoppingCart } from '@phosphor-icons/react'
 import React from 'react'
 import coffeeImg from '../../../../assets/img_coffee_home.svg'
-import { StyledText, Text } from '../../../../components/Text'
+import { StyledText } from '../../../../components/Text'
 import { defaultTheme } from '../../../../styles/themes/default'
 import {
   HeroContainer,
@@ -27,7 +27,12 @@ export function Hero() {
           >
             Encontre o café perfeito para qualquer hora do dia
           </StyledText>
-          <StyledText style={{ fontStretch: '100'}} tag="h2" size={20} color={defaultTheme['base-subtitle']}>
+          <StyledText
+            style={{ fontStretch: '100' }}
+            tag="h2"
+            size={20}
+            color={defaultTheme['base-subtitle']}
+          >
             Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
             hora
           </StyledText>
