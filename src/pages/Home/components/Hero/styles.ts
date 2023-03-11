@@ -18,45 +18,30 @@ export const TextContainer = styled.div`
 `
 
 export const TitleContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-`
-
-export const Title = styled.h1`
-  font-family: 'Baloo 2', sans-serif;
-  font-weight: 800;
-  font-size: 3rem;
-  line-height: 130%;
-
-  color: ${(props) => props.theme['base-title']};
-`
-
-export const Subtitle = styled.h2`
-  font-size: 1.25rem;
-  color: ${(props) => props.theme['base-subtitle']};
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `
 
 export const ItemsContainer = styled.div`
-    display: flex;
-    row-gap: 2.5rem;
-    column-gap: 1.25rem;
+  display: flex;
+  row-gap: 2.5rem;
+  column-gap: 1.25rem;
 `
 
 export const Item = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
 `
 
-
 export const IconContainer = styled.div`
-    width: 2rem;
-    height: 2rem;
-    padding: 0.5rem;
-    border-radius: 1000px;
-    background: ${(props) => props.theme['yellow-dark']};
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 1000px;
+  background: ${(props) => props.color};
 `
 
 export const HeroImage = styled.img`
