@@ -32,17 +32,18 @@ const StyledButton = styled.button<Props>`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.25rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 
   line-height: 160%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 
   transition: all 0.2s ease;
 
   ${(props) => {
-    const { variant, backgroundColor, hoverColor } = props
+    const { variant, backgroundColor } = props
 
     const normalStyle = css`
       padding: 12px 8px;

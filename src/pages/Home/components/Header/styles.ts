@@ -7,7 +7,12 @@ export const HeaderContainer = styled.header`
   padding: 32px 160px;
 `
 
+export const HeaderInfoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+`
+
 export const HeaderLogo = styled.img`
-  /* width: 5.30rem; */
   height: 2.5rem;
 `
