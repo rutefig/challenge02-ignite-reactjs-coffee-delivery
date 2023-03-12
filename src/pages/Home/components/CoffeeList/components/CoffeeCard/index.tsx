@@ -1,8 +1,16 @@
 import React from 'react'
 import coffeeImg from '../../../../../../assets/coffee1.svg'
+import { Counter } from '../../../../../../components/Counter'
 import { StyledText } from '../../../../../../components/Text'
 import { defaultTheme } from '../../../../../../styles/themes/default'
-import { ActionsContainer, CardContainer, CoffeeImage, TagsContainer, TagWrapper, TextContainer } from './styles'
+import {
+  ActionsContainer,
+  CardContainer,
+  CoffeeImage,
+  TagsContainer,
+  TagWrapper,
+  TextContainer,
+} from './styles'
 
 export const CoffeeCard = () => {
   return (
@@ -47,9 +55,16 @@ export const CoffeeCard = () => {
       </TextContainer>
 
       <ActionsContainer>
-        <StyledText className='price' variant='header' size={24} color={defaultTheme['base-text']}>
+        <StyledText
+          className="price"
+          variant="header"
+          size={24}
+          color={defaultTheme['base-text']}
+        >
           9,90
         </StyledText>
+
+        <Counter />
       </ActionsContainer>
     </CardContainer>
   )
