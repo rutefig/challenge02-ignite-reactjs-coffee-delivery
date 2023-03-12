@@ -25,8 +25,9 @@ export const TitleContainer = styled.div`
 
 export const ItemsContainer = styled.div`
   display: flex;
-  row-gap: 2.5rem;
-  column-gap: 1.25rem;
+  row-gap: 1.25rem;
+  column-gap: 2.5rem;
+  flex-wrap: wrap;
 `
 
 export const Item = styled.div`

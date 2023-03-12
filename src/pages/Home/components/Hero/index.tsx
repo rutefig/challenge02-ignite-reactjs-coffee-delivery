@@ -1,5 +1,5 @@
-import { Package, ShoppingCart } from '@phosphor-icons/react'
 import React from 'react'
+import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import coffeeImg from '../../../../assets/img_coffee_home.svg'
 import { StyledText } from '../../../../components/Text'
 import { defaultTheme } from '../../../../styles/themes/default'
@@ -43,14 +43,28 @@ export function Hero() {
             <IconContainer color={defaultTheme['yellow-dark']}>
               <ShoppingCart color={defaultTheme['white']} weight="fill" />
             </IconContainer>
-            <StyledText tag='span'>Compra simples e segura</StyledText>
+            <StyledText tag="span">Compra simples e segura</StyledText>
           </Item>
 
           <Item>
             <IconContainer color={defaultTheme['base-text']}>
               <Package color={defaultTheme['white']} weight="fill" />
             </IconContainer>
-            <StyledText tag='span'>Embalagem mantém o café intacto</StyledText>
+            <StyledText tag="span">Embalagem mantém o café intacto</StyledText>
+          </Item>
+
+          <Item>
+            <IconContainer color={defaultTheme['yellow']}>
+              <Timer color={defaultTheme['white']} weight="fill" />
+            </IconContainer>
+            <StyledText tag="span">Entrega rápida e rastreada</StyledText>
+          </Item>
+
+          <Item>
+            <IconContainer color={defaultTheme['purple']}>
+              <Coffee color={defaultTheme['white']} weight="fill" />
+            </IconContainer>
+            <StyledText tag="span">O café chega fresquinho até você</StyledText>
           </Item>
         </ItemsContainer>
       </TextContainer>
