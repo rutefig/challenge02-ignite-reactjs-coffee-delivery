@@ -43,14 +43,14 @@ export function Hero() {
             <IconContainer color={defaultTheme['yellow-dark']}>
               <ShoppingCart color={defaultTheme['white']} weight="fill" />
             </IconContainer>
-            <span>Compra simples e segura</span>
+            <StyledText tag='span'>Compra simples e segura</StyledText>
           </Item>
 
           <Item>
             <IconContainer color={defaultTheme['base-text']}>
               <Package color={defaultTheme['white']} weight="fill" />
             </IconContainer>
-            <span>Embalagem mantém o café intacto</span>
+            <StyledText tag='span'>Embalagem mantém o café intacto</StyledText>
           </Item>
         </ItemsContainer>
       </TextContainer>

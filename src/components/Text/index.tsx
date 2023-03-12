@@ -37,8 +37,7 @@ export const Text: React.FC<Props> = ({
 }
 
 export const StyledText = styled(Text)`
-  font-family: ${(props) => (props.variant === 'header' ? 'Baloo 2' : 'Roboto')},
-    sans-serif;
+  font-family: ${(props) => (props.variant === 'header' ? '\'Baloo 2\', cursive' : '\'Roboto\', sans-serif')};
   font-size: ${(props) => (props.size ?? 16) / 16}rem;
   font-weight: ${(props) => props.weight ?? 'normal'};
   line-height: ${(props) => props.lineHeight ?? 130}%;
