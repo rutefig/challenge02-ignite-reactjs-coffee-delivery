@@ -1,10 +1,13 @@
+import { ShoppingCartSimple } from '@phosphor-icons/react'
 import React from 'react'
 import coffeeImg from '../../../../../../assets/coffee1.svg'
+import { Button } from '../../../../../../components/Button'
 import { Counter } from '../../../../../../components/Counter'
 import { StyledText } from '../../../../../../components/Text'
 import { defaultTheme } from '../../../../../../styles/themes/default'
 import {
   ActionsContainer,
+  ActionsForm,
   CardContainer,
   CoffeeImage,
   TagsContainer,
@@ -64,7 +67,15 @@ export const CoffeeCard = () => {
           9,90
         </StyledText>
 
-        <Counter />
+        <ActionsForm>
+          <Counter />
+          <Button
+            backgroundColor={defaultTheme['purple-dark']}
+            hoverColor={defaultTheme['purple']}
+          >
+            <ShoppingCartSimple weight="fill" width={'1.375rem'} />
+          </Button>
+        </ActionsForm>
       </ActionsContainer>
     </CardContainer>
   )

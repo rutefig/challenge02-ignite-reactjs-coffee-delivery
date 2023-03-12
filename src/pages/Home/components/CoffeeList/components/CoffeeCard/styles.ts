@@ -53,3 +53,7 @@ export const ActionsContainer = styled.div`
     font-size: 0.875rem;
   }
 `
+export const ActionsForm = styled.form`
+    display: flex;
+    gap: 0.5rem;
+`
