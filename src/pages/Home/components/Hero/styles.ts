@@ -6,7 +6,7 @@ export const HeroContainer = styled.div`
   align-items: center;
   gap: 56px;
 
-  padding: 92px 160px;
+  padding: 92px 0px;
 `
 
 export const TextContainer = styled.div`
