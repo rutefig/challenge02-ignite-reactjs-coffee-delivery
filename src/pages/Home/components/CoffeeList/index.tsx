@@ -28,14 +28,14 @@ export function CoffeeList() {
 }
 
 const CoffeeListContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 54px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
 `
 
 const CardsList = styled.div`
-    display: flex;
-    column-gap: 32px;
-    row-gap: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  column-gap: 32px;
+  row-gap: 40px;
+  flex-wrap: wrap;
 `
