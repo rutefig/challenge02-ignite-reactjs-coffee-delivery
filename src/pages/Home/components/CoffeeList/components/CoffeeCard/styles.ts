@@ -54,6 +54,6 @@ export const ActionsContainer = styled.div`
   }
 `
 export const ActionsForm = styled.form`
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 `
