@@ -14,6 +14,9 @@
     "format": "npm run prettier:fix && npm run lint:fix",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{tsx,jsx,ts,js}": "npm run format"
+  },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.5",
     "react": "^18.2.0",
@@ -32,6 +35,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.9.3",
