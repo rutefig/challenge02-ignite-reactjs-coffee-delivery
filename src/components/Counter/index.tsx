@@ -1,15 +1,14 @@
-import { Minus, Plus } from '@phosphor-icons/react'
 import React, { InputHTMLAttributes, useState } from 'react'
 import styled from 'styled-components'
+import { Minus, Plus } from '@phosphor-icons/react'
 import { defaultTheme } from '../../styles/themes/default'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const Counter: React.FC<Props> = () => {
+export const Counter: React.FC<Props> = ({ min, max, ...props }) => {
   const [value, setValue] = useState(0)
-
-  const minValue = 0
-  const maxValue = 10
+  const maxValue = max ?? 10
+  const minValue = min ?? 0
 
   const handleIncrementValue = (event: React.SyntheticEvent) => {
     event.preventDefault()
@@ -26,14 +25,22 @@ export const Counter: React.FC<Props> = () => {
   }
 
   return (
-    <CounterContainer>
+    <CounterContainer {...props}>
       <Minus
         className="icon"
         weight="regular"
         color={defaultTheme['purple-dark']}
         onClick={handleDecrementValue}
       />
-      <StyledInput type="number" value={value} min={minValue} max={maxValue} onChange={() => {/** */}} />
+      <StyledInput
+        type="number"
+        value={value}
+        min={minValue}
+        max={maxValue}
+        onChange={() => {
+          /** */
+        }}
+      />
       <Plus
         className="icon"
         weight="regular"
