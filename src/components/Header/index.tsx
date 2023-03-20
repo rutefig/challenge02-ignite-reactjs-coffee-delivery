@@ -1,9 +1,9 @@
 import { MapPin, ShoppingCart } from '@phosphor-icons/react'
 import React from 'react'
-import headerLogo from '../../../../assets/header_logo.svg'
-import { Button } from '../../../../components/Button'
-import { StyledText } from '../../../../components/Text'
-import { defaultTheme } from '../../../../styles/themes/default'
+import headerLogo from '../../assets/header_logo.svg'
+import { Button } from '../Button'
+import { StyledText } from '../Text'
+import { defaultTheme } from '../../styles/themes/default'
 import { HeaderContainer, HeaderInfoContainer, HeaderLogo } from './styles'
 
 export function Header() {
