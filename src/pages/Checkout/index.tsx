@@ -1,6 +1,6 @@
 import React from 'react'
-import { MapPinLine } from '@phosphor-icons/react'
-import { Text } from '../../components/Text'
+import { CurrencyDollar, MapPinLine } from '@phosphor-icons/react'
+import { StyledText, Text } from '../../components/Text'
 import { defaultTheme } from '../../styles/themes/default'
 import {
   CheckoutContainer,
@@ -12,12 +12,13 @@ import {
   TextContainer,
 } from './styles'
 import { Input } from '../../components/Input'
+import { PaymentOptions } from './components/PaymentOptions'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
       <FormContainer>
-        <Text
+        <StyledText
           variant="header"
           tag="h4"
           color={defaultTheme['base-subtitle']}
@@ -25,17 +26,17 @@ export function Checkout() {
           size={18}
         >
           Complete o seu pedido
-        </Text>
+        </StyledText>
         <OrderFormContainer>
           <OrderFormHeader>
             <MapPinLine size={22} color={defaultTheme['yellow-dark']} />
             <TextContainer>
-              <Text color={defaultTheme['base-subtitle']}>
+              <StyledText color={defaultTheme['base-subtitle']}>
                 Endereço de Entrega
-              </Text>
-              <Text size={14}>
+              </StyledText>
+              <StyledText size={14}>
                 Informe o endereço onde deseja receber seu pedido
-              </Text>
+              </StyledText>
             </TextContainer>
           </OrderFormHeader>
 
@@ -60,9 +61,26 @@ export function Checkout() {
             </RowInputsContainer>
           </InputsContainer>
         </OrderFormContainer>
+
+        <OrderFormContainer>
+          <OrderFormHeader>
+            <CurrencyDollar size={22} color={defaultTheme['purple']} />
+            <TextContainer>
+              <StyledText color={defaultTheme['base-subtitle']}>
+                Pagamento
+              </StyledText>
+              <StyledText size={14}>
+                O pagamento é feito na entrega. Escolha a forma que deseja pagar
+              </StyledText>
+            </TextContainer>
+          </OrderFormHeader>
+
+          <PaymentOptions />
+        </OrderFormContainer>
       </FormContainer>
+
       <FormContainer>
-        <Text
+        <StyledText
           variant="header"
           tag="h4"
           color={defaultTheme['base-subtitle']}
@@ -70,7 +88,7 @@ export function Checkout() {
           size={18}
         >
           Cafés selecionados
-        </Text>
+        </StyledText>
       </FormContainer>
     </CheckoutContainer>
   )
