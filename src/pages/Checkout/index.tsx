@@ -11,6 +11,7 @@ import {
 } from './styles'
 import { PaymentOptions } from './components/PaymentOptions'
 import { DeliveryAddressForm } from './components/DeliveryAddressForm'
+import { CoffeeCard } from './components/CoffeeCard'
 
 export function Checkout() {
   return (
@@ -68,6 +69,13 @@ export function Checkout() {
         >
           Cafés selecionados
         </StyledText>
+
+        <OrderFormContainer
+          style={{ borderRadius: '6px 44px', width: 'max-content' }}
+        >
+          <CoffeeCard />
+          <CoffeeCard />
+        </OrderFormContainer>
       </FormContainer>
     </CheckoutContainer>
   )

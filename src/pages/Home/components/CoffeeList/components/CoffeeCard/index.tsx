@@ -1,5 +1,5 @@
-import { ShoppingCartSimple } from '@phosphor-icons/react'
 import React from 'react'
+import { ShoppingCartSimple } from '@phosphor-icons/react'
 import coffeeImg from '../../../../../../assets/coffee1.svg'
 import { Button } from '../../../../../../components/Button'
 import { Counter } from '../../../../../../components/Counter'

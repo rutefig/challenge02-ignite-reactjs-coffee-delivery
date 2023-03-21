@@ -33,15 +33,3 @@ export const TextContainer = styled.div`
   flex-direction: column;
   gap: 0.125rem;
 `
-
-export const InputsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: -webkit-fill-available;
-`
-
-export const RowInputsContainer = styled.div`
-  display: flex;
-  gap: 0.75rem;
-`
