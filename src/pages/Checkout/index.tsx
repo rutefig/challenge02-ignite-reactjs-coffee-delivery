@@ -1,18 +1,16 @@
 import React from 'react'
 import { CurrencyDollar, MapPinLine } from '@phosphor-icons/react'
-import { StyledText, Text } from '../../components/Text'
+import { StyledText } from '../../components/Text'
 import { defaultTheme } from '../../styles/themes/default'
 import {
   CheckoutContainer,
   FormContainer,
-  InputsContainer,
   OrderFormContainer,
   OrderFormHeader,
-  RowInputsContainer,
   TextContainer,
 } from './styles'
-import { Input } from '../../components/Input'
 import { PaymentOptions } from './components/PaymentOptions'
+import { DeliveryAddressForm } from './components/DeliveryAddressForm'
 
 export function Checkout() {
   return (
@@ -40,26 +38,7 @@ export function Checkout() {
             </TextContainer>
           </OrderFormHeader>
 
-          <InputsContainer>
-            <Input placeholder="CEP" required />
-            <Input placeholder="Rua" required />
-            <RowInputsContainer>
-              <Input placeholder="Número" required />
-              <Input
-                style={{ width: '-webkit-fill-available' }}
-                placeholder="Complemento"
-              />
-            </RowInputsContainer>
-            <RowInputsContainer>
-              <Input placeholder="Bairro" required />
-              <Input
-                style={{ width: '-webkit-fill-available' }}
-                placeholder="Cidade"
-                required
-              />
-              <Input placeholder="UF" style={{ width: '3.75rem' }} required />
-            </RowInputsContainer>
-          </InputsContainer>
+          <DeliveryAddressForm />
         </OrderFormContainer>
 
         <OrderFormContainer>
