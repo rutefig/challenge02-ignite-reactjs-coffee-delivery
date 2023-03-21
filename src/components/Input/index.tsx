@@ -4,13 +4,20 @@ import { Text } from '../Text'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {}
 
-export const Input: React.FC<Props> = ({ ...props }) => {
+export const Input: React.FC<Props> = ({
+  required,
+  style,
+  className,
+  ...props
+}) => {
   return (
-    <InputContainer>
+    <InputContainer style={style} className={className}>
       <StyledInput {...props} />
-      <LabelContainer>
-        <StyledText tag="span">Opcional</StyledText>
-      </LabelContainer>
+      {!required && (
+        <LabelContainer>
+          <StyledText tag="span">Opcional</StyledText>
+        </LabelContainer>
+      )}
     </InputContainer>
   )
 }

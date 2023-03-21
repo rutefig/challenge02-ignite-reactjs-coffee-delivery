@@ -5,10 +5,13 @@ import { defaultTheme } from '../../styles/themes/default'
 import {
   CheckoutContainer,
   FormContainer,
+  InputsContainer,
   OrderFormContainer,
   OrderFormHeader,
+  RowInputsContainer,
   TextContainer,
 } from './styles'
+import { Input } from '../../components/Input'
 
 export function Checkout() {
   return (
@@ -35,6 +38,27 @@ export function Checkout() {
               </Text>
             </TextContainer>
           </OrderFormHeader>
+
+          <InputsContainer>
+            <Input placeholder="CEP" required />
+            <Input placeholder="Rua" required />
+            <RowInputsContainer>
+              <Input placeholder="Número" required />
+              <Input
+                style={{ width: '-webkit-fill-available' }}
+                placeholder="Complemento"
+              />
+            </RowInputsContainer>
+            <RowInputsContainer>
+              <Input placeholder="Bairro" required />
+              <Input
+                style={{ width: '-webkit-fill-available' }}
+                placeholder="Cidade"
+                required
+              />
+              <Input placeholder="UF" style={{ width: '3.75rem' }} required />
+            </RowInputsContainer>
+          </InputsContainer>
         </OrderFormContainer>
       </FormContainer>
       <FormContainer>
