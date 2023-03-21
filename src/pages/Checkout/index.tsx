@@ -4,14 +4,19 @@ import { StyledText } from '../../components/Text'
 import { defaultTheme } from '../../styles/themes/default'
 import {
   CheckoutContainer,
+  Divider,
   FormContainer,
   OrderFormContainer,
   OrderFormHeader,
+  PriceInfoRow,
+  SelectedCoffeesList,
   TextContainer,
+  TotalPriceContainer,
 } from './styles'
 import { PaymentOptions } from './components/PaymentOptions'
 import { DeliveryAddressForm } from './components/DeliveryAddressForm'
 import { CoffeeCard } from './components/CoffeeCard'
+import { Button } from '../../components/Button'
 
 export function Checkout() {
   return (
@@ -70,12 +75,41 @@ export function Checkout() {
           Cafés selecionados
         </StyledText>
 
-        <OrderFormContainer
-          style={{ borderRadius: '6px 44px', width: 'max-content' }}
-        >
+        <SelectedCoffeesList>
           <CoffeeCard />
+          <Divider />
           <CoffeeCard />
-        </OrderFormContainer>
+          <Divider />
+          <TotalPriceContainer>
+            <PriceInfoRow>
+              <StyledText size={14}>Total de itens</StyledText>
+              <StyledText>R$ 29,70</StyledText>
+            </PriceInfoRow>
+            <PriceInfoRow>
+              <StyledText size={14}>Entrega</StyledText>
+              <StyledText>R$ 3,50</StyledText>
+            </PriceInfoRow>
+            <PriceInfoRow>
+              <StyledText
+                size={20}
+                weight="bold"
+                color={defaultTheme['base-subtitle']}
+              >
+                Total
+              </StyledText>
+              <StyledText
+                size={20}
+                weight="bold"
+                color={defaultTheme['base-subtitle']}
+              >
+                R$ 33,20
+              </StyledText>
+            </PriceInfoRow>
+          </TotalPriceContainer>
+          <Button style={{ width: '-webkit-fill-available' }}>
+            Confirmar Pedido
+          </Button>
+        </SelectedCoffeesList>
       </FormContainer>
     </CheckoutContainer>
   )
