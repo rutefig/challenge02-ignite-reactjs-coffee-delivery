@@ -31,6 +31,8 @@ const CoffeeListContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 54px;
+  max-width: 70rem;
+  align-self: center;
 `
 
 const CardsList = styled.div`
