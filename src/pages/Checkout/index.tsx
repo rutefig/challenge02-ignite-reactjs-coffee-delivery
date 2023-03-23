@@ -4,6 +4,7 @@ import { StyledText } from '../../components/Text'
 import { defaultTheme } from '../../styles/themes/default'
 import {
   CheckoutContainer,
+  ConfirmButton,
   Divider,
   FormContainer,
   OrderFormContainer,
@@ -16,12 +17,11 @@ import {
 import { PaymentOptions } from './components/PaymentOptions'
 import { DeliveryAddressForm } from './components/DeliveryAddressForm'
 import { CoffeeCard } from './components/CoffeeCard'
-import { Button } from '../../components/Button'
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <FormContainer>
+      <FormContainer style={{ flex: '1' }}>
         <StyledText
           variant="header"
           tag="h4"
@@ -106,9 +106,11 @@ export function Checkout() {
               </StyledText>
             </PriceInfoRow>
           </TotalPriceContainer>
-          <Button style={{ width: '-webkit-fill-available' }}>
-            Confirmar Pedido
-          </Button>
+          <ConfirmButton>
+            <StyledText size={14} weight="bold">
+              Confirmar Pedido
+            </StyledText>
+          </ConfirmButton>
         </SelectedCoffeesList>
       </FormContainer>
     </CheckoutContainer>

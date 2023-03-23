@@ -1,43 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CreditCard, Bank, Money } from '@phosphor-icons/react'
-import { Button } from '../../../../components/Button'
 import { StyledText } from '../../../../components/Text'
 import { defaultTheme } from '../../../../styles/themes/default'
+import { Select } from '../../../../components/Select'
 
 export function PaymentOptions() {
   return (
     <PaymentOptionsContainer>
-      <Button
-        variant="icon"
-        backgroundColor={defaultTheme['base-button']}
-        hoverColor={defaultTheme['base-hover']}
-      >
+      <Select>
         <CreditCard size={16} color={defaultTheme['purple']} />
         <StyledText size={12} color={defaultTheme['base-text']}>
           Cartão de crédito
         </StyledText>
-      </Button>
-      <Button
-        variant="icon"
-        backgroundColor={defaultTheme['base-button']}
-        hoverColor={defaultTheme['base-hover']}
-      >
+      </Select>
+      <Select>
         <Bank size={16} color={defaultTheme['purple']} />
         <StyledText size={12} color={defaultTheme['base-text']}>
           Cartão de débito
         </StyledText>
-      </Button>
-      <Button
-        variant="icon"
-        backgroundColor={defaultTheme['base-button']}
-        hoverColor={defaultTheme['base-hover']}
-      >
+      </Select>
+      <Select>
         <Money size={16} color={defaultTheme['purple']} />
         <StyledText size={12} color={defaultTheme['base-text']}>
           Dinheiro
         </StyledText>
-      </Button>
+      </Select>
     </PaymentOptionsContainer>
   )
 }

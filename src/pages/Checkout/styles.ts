@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Button } from '../../components/Button'
 
 export const CheckoutContainer = styled.div`
   display: flex;
@@ -58,4 +59,9 @@ export const PriceInfoRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
+
+export const ConfirmButton = styled(Button)`
+  width: -webkit-fill-available;
+  text-transform: uppercase;
 `

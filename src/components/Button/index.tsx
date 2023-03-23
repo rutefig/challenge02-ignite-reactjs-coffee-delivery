@@ -7,6 +7,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant
   backgroundColor?: string
   hoverColor?: string
+  focusBorderColor?: string
 }
 
 export const Button: React.FC<Props> = ({
