@@ -1,8 +1,9 @@
-import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import React from 'react'
 import styled from 'styled-components'
+import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import { StyledText } from '../../components/Text'
 import { defaultTheme } from '../../styles/themes/default'
+import scooterImg from '../../assets/img_scooter.svg'
 
 export function Success() {
   return (
@@ -22,39 +23,46 @@ export function Success() {
         </StyledText>
       </HeaderContainer>
 
-      <OrderInfoContainer>
-        <OrderInfoItem>
-          <IconContainer color={defaultTheme['purple']}>
-            <MapPin weight="fill" color={defaultTheme['white']} />
-          </IconContainer>
-          <TextContainer>
-            <StyledText>
-              Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto
-              Alegre, RS
-            </StyledText>
-          </TextContainer>
-        </OrderInfoItem>
+      <ContentContainer>
+        <OrderInfoContainer>
+          <OrderInfoItem>
+            <IconContainer color={defaultTheme['purple']}>
+              <MapPin weight="fill" color={defaultTheme['white']} />
+            </IconContainer>
+            <TextContainer>
+              <StyledText>
+                Entrega em{' '}
+                <StyledText tag="span" weight="bold">
+                  Rua João Daniel Martinelli, 102
+                </StyledText>{' '}
+                Farrapos - Porto Alegre, RS
+              </StyledText>
+            </TextContainer>
+          </OrderInfoItem>
 
-        <OrderInfoItem>
-          <IconContainer color={defaultTheme['yellow']}>
-            <Timer weight="fill" color={defaultTheme['white']} />
-          </IconContainer>
-          <TextContainer>
-            <StyledText>Previsão de entrega</StyledText>
-            <StyledText>20 min - 30 min</StyledText>
-          </TextContainer>
-        </OrderInfoItem>
+          <OrderInfoItem>
+            <IconContainer color={defaultTheme['yellow']}>
+              <Timer weight="fill" color={defaultTheme['white']} />
+            </IconContainer>
+            <TextContainer>
+              <StyledText>Previsão de entrega</StyledText>
+              <StyledText weight="bold">20 min - 30 min</StyledText>
+            </TextContainer>
+          </OrderInfoItem>
 
-        <OrderInfoItem>
-          <IconContainer color={defaultTheme['yellow-dark']}>
-            <CurrencyDollar color={defaultTheme['white']} />
-          </IconContainer>
-          <TextContainer>
-            <StyledText>Pagamento na entrega</StyledText>
-            <StyledText>Cartão de Crédito</StyledText>
-          </TextContainer>
-        </OrderInfoItem>
-      </OrderInfoContainer>
+          <OrderInfoItem>
+            <IconContainer color={defaultTheme['yellow-dark']}>
+              <CurrencyDollar color={defaultTheme['white']} />
+            </IconContainer>
+            <TextContainer>
+              <StyledText>Pagamento na entrega</StyledText>
+              <StyledText weight="bold">Cartão de Crédito</StyledText>
+            </TextContainer>
+          </OrderInfoItem>
+        </OrderInfoContainer>
+
+        <SuccessImage src={scooterImg} />
+      </ContentContainer>
     </SuccessContainer>
   )
 }
@@ -68,11 +76,17 @@ const SuccessContainer = styled.div`
 
 const HeaderContainer = styled.div``
 
+const ContentContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
 const OrderInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 32.875rem;
+  width: 32.875rem;
   position: relative;
   box-sizing: border-box;
   background: ${(props) => props.theme['background']};
@@ -116,3 +130,7 @@ const IconContainer = styled.div`
 `
 
 const TextContainer = styled.div``
+
+const SuccessImage = styled.img`
+  max-width: 30.75rem;
+`
