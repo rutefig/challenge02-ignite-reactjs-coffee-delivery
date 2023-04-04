@@ -1,3 +1,12 @@
 {
-    "cart": []
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Expresso Tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "categories": ["Tradicional", "Gelado"],
+      "price": 9.90
+    }
+  ],
+  "cart": []
 }
