@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createContext, ReactNode } from 'react'
 
-interface Coffee {
+export interface Coffee {
   id: number
   name: string
   description: string
@@ -25,7 +25,7 @@ export function CoffeesProvider({ children }: CoffeesProviderProps) {
   async function fetchCoffees() {
     const response = await fetch('http://localhost:3333/coffees')
     const data = await response.json()
-    console.log(data)
+    setCoffees(data)
   }
 
   useEffect(() => {

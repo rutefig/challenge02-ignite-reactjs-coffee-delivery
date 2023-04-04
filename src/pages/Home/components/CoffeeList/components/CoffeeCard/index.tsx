@@ -14,33 +14,32 @@ import {
   TagWrapper,
   TextContainer,
 } from './styles'
+import { Coffee } from '../../../../../../contexts/CoffeesContext'
 
-export const CoffeeCard = () => {
+interface CoffeeCardProps {
+  coffee: Coffee
+}
+
+export const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
   return (
     <CardContainer>
       <CoffeeImage src={coffeeImg} />
 
       <TagsContainer>
-        <TagWrapper>
-          <StyledText
-            tag="span"
-            color={defaultTheme['yellow-dark']}
-            size={10}
-            weight="bold"
-          >
-            Tradicional
-          </StyledText>
-        </TagWrapper>
-        <TagWrapper>
-          <StyledText
-            tag="span"
-            color={defaultTheme['yellow-dark']}
-            size={10}
-            weight="bold"
-          >
-            Gelado
-          </StyledText>
-        </TagWrapper>
+        {coffee.categories.map((category) => {
+          return (
+            <TagWrapper key={category}>
+              <StyledText
+                tag="span"
+                color={defaultTheme['yellow-dark']}
+                size={10}
+                weight="bold"
+              >
+                {category}
+              </StyledText>
+            </TagWrapper>
+          )
+        })}
       </TagsContainer>
 
       <TextContainer>
@@ -50,10 +49,10 @@ export const CoffeeCard = () => {
           size={20}
           color={defaultTheme['base-subtitle']}
         >
-          Expresso Tradicional
+          {coffee.name}
         </StyledText>
         <StyledText tag="p" size={14} color={defaultTheme['base-label']}>
-          O tradicional café feito com água quente e grãos moídos
+          {coffee.description}
         </StyledText>
       </TextContainer>
 
@@ -64,7 +63,7 @@ export const CoffeeCard = () => {
           size={24}
           color={defaultTheme['base-text']}
         >
-          9,90
+          {coffee.price}
         </StyledText>
 
         <ActionsForm>

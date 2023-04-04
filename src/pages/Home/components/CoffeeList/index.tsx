@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { StyledText } from '../../../../components/Text'
+import { CoffeesContext } from '../../../../contexts/CoffeesContext'
 import { defaultTheme } from '../../../../styles/themes/default'
 import { CoffeeCard } from './components/CoffeeCard'
 
 export function CoffeeList() {
+  const { coffees } = useContext(CoffeesContext)
   return (
     <CoffeeListContainer>
       <StyledText
@@ -16,12 +18,9 @@ export function CoffeeList() {
         Nossos cafés
       </StyledText>
       <CardsList>
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
+        {coffees.map((coffee) => {
+          return <CoffeeCard key={coffee.id} coffee={coffee} />
+        })}
       </CardsList>
     </CoffeeListContainer>
   )
