@@ -21,12 +21,14 @@ interface CoffeeCardProps {
 }
 
 export const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
+  const { name, description, categories, price } = coffee
+
   return (
     <CardContainer>
       <CoffeeImage src={coffeeImg} />
 
       <TagsContainer>
-        {coffee.categories.map((category) => {
+        {categories.map((category) => {
           return (
             <TagWrapper key={category}>
               <StyledText
@@ -49,10 +51,10 @@ export const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
           size={20}
           color={defaultTheme['base-subtitle']}
         >
-          {coffee.name}
+          {name}
         </StyledText>
         <StyledText tag="p" size={14} color={defaultTheme['base-label']}>
-          {coffee.description}
+          {description}
         </StyledText>
       </TextContainer>
 
@@ -63,7 +65,7 @@ export const CoffeeCard = ({ coffee }: CoffeeCardProps) => {
           size={24}
           color={defaultTheme['base-text']}
         >
-          {coffee.price}
+          {price}
         </StyledText>
 
         <ActionsForm>

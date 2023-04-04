@@ -4,8 +4,22 @@
       "id": 1,
       "name": "Expresso Tradicional",
       "description": "O tradicional café feito com água quente e grãos moídos",
-      "categories": ["Tradicional", "Gelado"],
+      "categories": ["Tradicional"],
       "price": 9.90
+    },
+    {
+      "id": 2,
+      "name": "Americano",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "categories": ["Tradicional", "Americano"],
+      "price": 10.90
+    },
+    {
+      "id": 3,
+      "name": "Capuccino",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "categories": ["Tradicional", "Gelado", "Natas"],
+      "price": 12.65
     }
   ],
   "cart": []
