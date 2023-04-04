@@ -1,12 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { Coffee } from '../..'
 import { StyledText } from '../../../../components/Text'
-import { CoffeesContext } from '../../../../contexts/CoffeesContext'
 import { defaultTheme } from '../../../../styles/themes/default'
 import { CoffeeCard } from './components/CoffeeCard'
 
-export function CoffeeList() {
-  const { coffees } = useContext(CoffeesContext)
+interface CoffeeListProps {
+  coffees: Coffee[]
+}
+
+export function CoffeeList({ coffees }: CoffeeListProps) {
   return (
     <CoffeeListContainer>
       <StyledText

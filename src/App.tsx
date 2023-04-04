@@ -4,15 +4,15 @@ import { defaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/global'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './router'
-import { CoffeesProvider } from './contexts/CoffeesContext'
+import { CartProvider } from './contexts/CartContext'
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider theme={defaultTheme}>
-        <CoffeesProvider>
+        <CartProvider>
           <RouterProvider router={router} />
-        </CoffeesProvider>
+        </CartProvider>
         <GlobalStyle />
       </ThemeProvider>
     </div>

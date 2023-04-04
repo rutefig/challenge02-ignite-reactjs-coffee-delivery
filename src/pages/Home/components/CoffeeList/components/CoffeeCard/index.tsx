@@ -14,7 +14,7 @@ import {
   TagWrapper,
   TextContainer,
 } from './styles'
-import { Coffee } from '../../../../../../contexts/CoffeesContext'
+import { Coffee } from '../../../..'
 
 interface CoffeeCardProps {
   coffee: Coffee
